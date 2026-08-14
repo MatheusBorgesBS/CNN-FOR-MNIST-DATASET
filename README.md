@@ -29,6 +29,8 @@ A ideia dessa parte foi implementar manualmente uma camada convolucional, sem us
 | Validação | 0.3568 | 89.15% |
 | Teste | 0.3326 | 90.05% |
 
+![Predições da CNN NumPy](imagens/numpy.png)
+
 ## 2. A mesma tarefa com PyTorch
 
 Depois de validar o entendimento manual, a rede foi reimplementada com `torch.nn`, permitindo uma arquitetura mais profunda e treino no dataset completo.
@@ -49,7 +51,11 @@ Depois de validar o entendimento manual, a rede foi reimplementada com `torch.nn
 | Validação | 0.3123 | 91.13% |
 | Teste | 0.2949 | 91.25% |
 
+![Predições da CNN PyTorch](imagens/torch.png)
+
 > A comparação entre as duas CNNs não é pareada: a versão NumPy treinou com 5000 amostras e 1 camada convolucional; a versão PyTorch treinou com o dataset completo (~29 mil amostras) e 2 camadas convolucionais. Mesma tarefa, condições diferentes — o objetivo não foi comparar performance, e sim mostrar a evolução de "entender a mecânica" para "usar o framework".
+
+![Comparação de loss e acurácia entre as duas CNNs](imagens/metricas.png)
 
 ## 3. Submissão no Kaggle
 
@@ -61,6 +67,7 @@ O modelo treinado em PyTorch foi usado para gerar as predições sobre o `test.c
 
 ```
 CNN_for_MNIST.ipynb   # notebook com toda a implementação (NumPy + PyTorch)
+imagens/               # gráficos e exemplos de predição usados neste README
 train.csv             # dados de treino (Kaggle Digit Recognizer)
 test.csv              # dados de teste (Kaggle Digit Recognizer)
 submission.csv        # arquivo de submissão gerado
