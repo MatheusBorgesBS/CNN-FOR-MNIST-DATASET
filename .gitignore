@@ -1,0 +1,22 @@
+# Ambiente virtual
+venv/
+env/
+.venv/
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+
+# Jupyter
+.ipynb_checkpoints/
+anaconda_projects/
+
+# Checkpoints de treinamento
+*.pth
+*.ckpt
+checkpoints/
+
+# SO / editor
+.DS_Store
+.vscode/
